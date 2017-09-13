@@ -108,7 +108,7 @@ Developers building infrastructure on the CommerceBlock platform will have acces
   * Merchants and customers receive cryptographic proof that a Bitcoin transaction​ ​is​ ​associated​ ​with​ ​a​ ​real​ ​world​ ​contract​ ​in​ ​zero​ ​knowledge.
 * **Smart contract templates and escrow wizard:**   
   * Escrow and smart contract templates will be available for trade flow management. These templates will make multisignature dispute mediation easier​ ​for​ ​B2B,​ ​B2C​ ​and​ ​P2P​ ​trading​ ​applications.
-  * Templates for in-channel lightning network smart contracts will be available as well. API users in multisignature escrow can engage their funds into swaps, CFDs, and other financial instruments. Extended with atomic swaps, a Bitcoin backed derivatives market could be constructed on top of the Lightning​ ​Network. 
+  * Templates for in-channel lightning network smart contracts will be available as well. API users in multisignature escrow can engage their funds into swaps, CFDs, and other financial instruments. Extended with atomic swaps, a Bitcoin backed derivatives market could be constructed on top of the Lightning​ ​Network.
 * **Token management and distribution**:
   * Asset issuers will be able to construct and distribute assets on public
 blockchains in a privacy preserving manner. The token purchase agreement
@@ -178,19 +178,19 @@ While success is never guaranteed, it is clear that the disintermediating capabi
 
 ### References
 
-[1]​​​<https://www.imf.org/external/pubs/ft/wp/2013/wp1328.pdf>
-[2]​​​<https://bitcoin.org/bitcoin.pd​f>
-[3]​​​<https://github.com/commerceblock/pay-to-contract-ui>
-[4]​​​<https://arxiv.org/pdf/1212.3257.pdf>
-[5]​​​<https://github.com/lightningnetwork/lightning-rfc>
-[6]​​​<http://www.jbonneau.com/doc/GBGN17-FC-physical_escrow.pdf>
-[7]​​​<https://adiabat.github.io/dlc.pdf>
-[8]​​​<https://blockstream.com/sidechains.pdf>
-[9]​​​<https://blockstream.com/bitcoin17-final41.pdf>
-[10]​​​<https://petertodd.org/2016/commitments-and-single-use-seals>
-[11]<https://github.com/commerceblock/pay-to-contract-protocol-specification/blob/master/bip-draft.mediawiki>
-[12]​​<http://www.columbia.edu/~jl4130/BTC.pdf>
-[13]​​<https://cyber.stanford.edu/sites/default/files/russelloconnor.pdf>
+[1]​​​<https://www.imf.org/external/pubs/ft/wp/2013/wp1328.pdf> 
+[2]​​​<https://bitcoin.org/bitcoin.pd​f> 
+[3]​​​<https://github.com/commerceblock/pay-to-contract-ui> 
+[4]​​​<https://arxiv.org/pdf/1212.3257.pdf> 
+[5]​​​<https://github.com/lightningnetwork/lightning-rfc> 
+[6]​​​<http://www.jbonneau.com/doc/GBGN17-FC-physical_escrow.pdf> 
+[7]​​​<https://adiabat.github.io/dlc.pdf> 
+[8]​​​<https://blockstream.com/sidechains.pdf> 
+[9]​​​<https://blockstream.com/bitcoin17-final41.pdf> 
+[10]​​​<https://petertodd.org/2016/commitments-and-single-use-seals> 
+[11]<https://github.com/commerceblock/pay-to-contract-protocol-specification/blob/master/bip-draft.mediawiki> 
+[12]​​<http://www.columbia.edu/~jl4130/BTC.pdf> 
+[13]​​<https://cyber.stanford.edu/sites/default/files/russelloconnor.pdf> 
 
 **Important Notice**
 
