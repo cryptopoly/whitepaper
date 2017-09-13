@@ -36,7 +36,7 @@ Specifically, the CommerceBlock API will allow users to construct zero knowledge
 
 CommerceBlock's first product offering is based on our implementation of the pay-to-contract protocol described by Gerhardt and Hanke. This protocol is designed to mimic real world payment interactions between merchants and customers. The protocol results in only the merchant and customer having cryptographic proof of who is being paid and​ ​for​ ​what.
 
-We have specified and implemented their multiparty key derivation scheme by extending BIP-0032 (Hierarchical Deterministic Wallets). The process has been generalised and made BIP-0043​ ​compliant.​ ​We​ ​have​ ​submitted​ ​a​ ​draft​ ​BIP​ ​for​ ​approval​ ​[11].
+We have specified and implemented their multiparty key derivation scheme by extending BIP-0032 (Hierarchical Deterministic Wallets). The process has been generalized and made BIP-0043​ ​compliant.​ ​We​ ​have​ ​submitted​ ​a​ ​draft​ ​BIP​ ​for​ ​approval​ ​[11].
 
 ### CommerceBlock​ ​Network​ ​Actors
 
@@ -44,29 +44,27 @@ Much of CommerceBlock's tooling will be available for public use on the Commerce
 
 ## Product​ ​Offerings
 
-```
-● Cryptocurrency ​ ​ agnostic ​ ​ APIs, ​ ​ SDKs ​ ​ and ​ ​ Web ​ ​ Portal:
-○ The CommerceBlock web portal will provide both prepaid and subscription
+* Cryptocurrency agnostic APIs, SDKs and Web Portal:
+  * The CommerceBlock web portal will provide both prepaid and subscription
 models for users who wish to access our tools for building smart contracts
 and​ ​issuing/distributing​ ​assets
-○ API​ ​users​ ​will​ ​pay​ ​per​ ​API​ ​call
-○ Our​ ​SDKs​ ​will​ ​be​ ​available​ ​for​ ​free​ ​download.
-● Trade flow templates: CommerceBlock provides prepackaged, paid access trade
+  * API​ ​users​ ​will​ ​pay​ ​per​ ​API​ ​call
+  * Our​ ​SDKs​ ​will​ ​be​ ​available​ ​for​ ​free​ ​download.
+* Trade flow templates: CommerceBlock provides prepackaged, paid access trade
 flow templates to its clients. These templates abstract away the intricacies and
 pitfalls​ ​of​ ​trade​ ​management.
-● Enterprise Integrations: CommerceBlock does bespoke implementations of its
+* Enterprise Integrations: CommerceBlock does bespoke implementations of its
 toolset for enterprise customers. Enterprise customers will use both our APIs and
 SDKs. Pricing is determined on a case by case basis, revenue shares/partnerships
 are​ ​considered.
-● Third Party Integrations: CommerceBlock has made inroads integrating third party
+* Third Party Integrations: CommerceBlock has made inroads integrating third party
 standards​ ​in​ ​identity,​ ​storage​ ​and​ ​security.
-● Commitment to open standards: CommerceBlock is committed to open
+* Commitment to open standards: CommerceBlock is committed to open
 standards.​ ​All​ ​of​ ​our​ ​code​ ​will​ ​be​ ​open​ ​source​ ​and​ ​available​ ​for​ ​peer​ ​review.
-```
 
 ### CommerceBlock​ ​Clients
 
-#### All of our clients want to trade ​ something ​. In some cases they want to tokenize the value
+All of our clients want to trade *something*. In some cases they want to tokenize the value
 
 they are trading, in others they require only contractual agreements and escrowed funds. We provide the tooling to make trust minimal trading possible in a variety of contexts. Below we will describe some of our current clients as well as some use cases we see as strong​ ​candidates​ ​for​ ​integration​ ​with​ ​CommerceBlock.
 
@@ -84,7 +82,7 @@ A product such as ours poses certain business risks. For example, a traditionall
 
 Privacy is also an issue. While payments on most public blockchains lack privacy, we are able to mask any business logic or trade details from public view by using our pay-to-contract implementation. In the future we will integrate privacy enhancing transaction​ ​protocols​ ​into​ ​our​ ​product​ ​offerings.
 
-Scaling is another common concern when building applications on public blockchains. Network costs and wait times for customers using our platform can be variable depending on the available capacity of the public blockchain and the protocols they are using. With proper fee estimates, replace by fee functionality, transaction cut through, schnorr aggregation across inputs,, lightning networks and sidechains we can sufficiently manage this reality. We understand that the security of decentralized system requires certain usability tradeoffs; transaction backlogs and a healthy free market are required to maintain the probabilistic security guarantees of the system [12]. We embrace this reality and will engineer​ ​tools​ ​that​ ​smoothen​ ​the​ ​rough​ ​edges​ ​of​ ​these​ ​security-first​ ​distributed​ ​systems.
+Scaling is another common concern when building applications on public blockchains. Network costs and wait times for customers using our platform can be variable depending on the available capacity of the public blockchain and the protocols they are using. With proper fee estimates, replace by fee functionality, transaction cut through, schnorr aggregation across inputs, lightning networks and sidechains we can sufficiently manage this reality. We understand that the security of decentralized system requires certain usability tradeoffs; transaction backlogs and a healthy free market are required to maintain the probabilistic security guarantees of the system [12]. We embrace this reality and will engineer​ ​tools​ ​that​ ​smoothen​ ​the​ ​rough​ ​edges​ ​of​ ​these​ ​security-first​ ​distributed​ ​systems.
 
 Public blockchains can also experience controversial hard forks, an event wherein consensus code is modified in a backwards incompatible way. This results in the cryptocurrency fracturing into multiple coins. In the event of an irreconcilable hard fork, CommerceBlock reserves the right to select which networks its infrastructure and development​ ​efforts​ ​will​ ​support.
 
@@ -94,48 +92,58 @@ CommerceBlock has a very unique approach. It is well known that proof of work ba
 
 Our pay-to-contract implementation is the first step in this direction. Merchants and customers can embed their contract into an address, such that the payment itself proves who is being paid and for what. The wider network does not know the details of the contract, but it is provable in zero knowledge. This is done in a way which looks like a completely normal transaction. There is no data bloating the blockchain through OP_RETURN or bare multisig pubkey stuffing. If a dispute arises there will be no question as to what the contractual obligations are. While blockchains cannot solve all disagreements that occur in "meat space," they can certainly make them less ambiguous and easier to mediate. We think the distributed ledger and blockchain based systems which attempt to include​ ​all​ ​of​ ​this​ ​information​ ​in​ ​the​ ​smart​ ​contract​ ​itself​ ​are​ ​misguided.
 
-Our second step towards this end is advanced templating for in-channel Lightning Network smart contracts using "Discreet Log" oracles. For example, two parties want to enter a bet on the price of Bitcoin (as a hedge); the nature of that bet does not concern the general public (including competition). This requirement for privacy would make working on platforms that encourage programmatic expressiveness and complexity a competitive risk. These parties do not want to associate their funds with a publicly visible smart contract that represents a specific business function. Not to mention, the talent pool of those who are competent enough to write smart contracts with complex conditional logic, game theoretic implications and nondeterminsitic code execution pathways is completely illiquid. Pursuing such​ ​a​ ​strategy​ ​is​ ​not​ ​an​ ​efficient​ ​use​ ​of​ ​time​ ​or​ ​money.
+Our second step towards this end is advanced templating for in-channel Lightning Network smart contracts using "Discreet Log" oracles. For example, two parties want to enter a bet on the price of Bitcoin (as a hedge); the nature of that bet does not concern the general public (including competition). This requirement for privacy would make working on platforms that encourage programmatic expressiveness and complexity a competitive risk. These parties do not want to associate their funds with a publicly visible smart contract that represents a specific business function. Not to mention, the talent pool of those who are competent enough to write smart contracts with complex conditional logic, game theoretic implications and nondeterministic code execution pathways is completely illiquid. Pursuing such​ ​a​ ​strategy​ ​is​ ​not​ ​an​ ​efficient​ ​use​ ​of​ ​time​ ​or​ ​money.
 
 These bettors could instead leverage our contract templates to create a structured derivatives bet completely P2P in multisig output scripts. With Schnorr signatures these transactions will be indistinguishable from other transactions with Schnorr signatures and MAST would allow for elaborate conditional pathway scripting. The bettors would open channels with each other by depositing funds into a multisig address. The channel equilibrium would shift when the contract was up and the Discreet Log oracle blindly signed off on the final price. It would also be possible for one party to novate and atomically swap their coins with someone who wished to take over their position without prematurely ending the bet. With the modest script tooling available on blockchain systems focused on security and code simplicity, you can execute an sea of excitingly innovative smart​ ​contracts.
 
 ### CommerceBlock​ ​Token​ ​(CBT)
 
-CommerceBlock plans to issue CommerceBlock Tokens (CBTs), a utility token that will be tracked on a public blockchain. To use services in the CommerceBlock Ecosystem, customers will have to pay in CBTs. The token will be initially tracked on the Ethereum blockchain using an ERC-20 smart contract. When a sufficiently viable sidechain or colour coin scheme is available on a more secure public blockchain we will transfer the value there. We imagine a future where customers using our infrastructure will also require payment​ ​in​ ​CBT,​ ​creating​ ​an​ ​ecosystem​ ​of​ ​applications​ ​revolving​ ​around​ ​CommerceBlock.
+CommerceBlock plans to issue CommerceBlock Tokens (CBTs), a utility token that will be tracked on a public blockchain. To use services in the CommerceBlock Ecosystem, customers will have to pay in CBTs. The token will be initially tracked on the Ethereum blockchain using an ERC-20 smart contract. When a sufficiently viable sidechain or color coin scheme is available on a more secure public blockchain we will transfer the value there. We imagine a future where customers using our infrastructure will also require payment​ ​in​ ​CBT,​ ​creating​ ​an​ ​ecosystem​ ​of​ ​applications​ ​revolving​ ​around​ ​CommerceBlock.
 
 ### CommerceBlock​ ​Ecosystem
 
-Developers building infrastructure on the CommerceBlock platform will have access to API endpoints​ ​in​ ​our​ ​ecosystem​ ​that​ ​provide​ ​the​ ​following​ ​functionality: **● Privacy preserving invoicing and payment portal:** ○ Merchants and customers receive cryptographic proof that a Bitcoin transaction​ ​is​ ​associated​ ​with​ ​a​ ​real​ ​world​ ​contract​ ​in​ ​zero​ ​knowledge. **● Smart contract templates and escrow wizard:** ○ Escrow and smart contract templates will be available for trade flow management. These templates will make multisignature dispute mediation easier​ ​for​ ​B2B,​ ​B2C​ ​and​ ​P2P​ ​trading​ ​applications.
+Developers building infrastructure on the CommerceBlock platform will have access to API endpoints​ ​in​ ​our​ ​ecosystem​ ​that​ ​provide​ ​the​ ​following​ ​functionality:
 
-```
-○ Templates for in-channel lightning network smart contracts will be available
-as well. API users in multisignature escrow can engage their funds into
-swaps, CFDs, and other financial instruments. Extended with atomic swaps, a
-Bitcoin backed derivatives market could be constructed on top of the
-Lightning​ ​Network.
-● Token ​ ​ management ​ ​ and ​ ​ distribution:
-○ Asset issuers will be able to construct and distribute assets on public
+* **Privacy preserving invoicing and payment portal:**
+  * Merchants and customers receive cryptographic proof that a Bitcoin transaction​ ​is​ ​associated​ ​with​ ​a​ ​real​ ​world​ ​contract​ ​in​ ​zero​ ​knowledge.
+* **Smart contract templates and escrow wizard:**   
+  * Escrow and smart contract templates will be available for trade flow management. These templates will make multisignature dispute mediation easier​ ​for​ ​B2B,​ ​B2C​ ​and​ ​P2P​ ​trading​ ​applications.
+  * Templates for in-channel lightning network smart contracts will be available as well. API users in multisignature escrow can engage their funds into swaps, CFDs, and other financial instruments. Extended with atomic swaps, a Bitcoin backed derivatives market could be constructed on top of the Lightning​ ​Network.
+* **Token management and distribution**:
+  * Asset issuers will be able to construct and distribute assets on public
 blockchains in a privacy preserving manner. The token purchase agreement
 and​ ​other​ ​legal​ ​information​ ​can​ ​be​ ​directly​ ​associated​ ​with​ ​the​ ​token.
-● Data ​ ​ Analysis
-○ Our suite of analytical tools will allow customers to easily analyze their trade
+* **Data Analysis**
+  * Our suite of analytical tools will allow customers to easily analyze their trade
 history​ ​and​ ​search​ ​for​ ​inefficiencies​ ​in​ ​trade​ ​flows.
-```
 
 ### Token​ ​Economics
 
-**Token Type** ​ ​​-​ ​ERC **Ticker** ​ ​​-​ ​CBT **Total Supply** ​ ​​-​ ​1,000,000,000​ ​CBT **Token Sale** ​ ​​-​ ​40%​ ​Token​ ​Generating​ ​Event **Payment Method** ​ ​​-​ ​BTC​ ​or​ ​ETH **Maximum Raise** ​ ​​-​ ​$25m
+**Token Type** ​​-​ ​ERC
+**Ticker** ​​-​ ​CBT
+**Total Supply** ​​-​ ​1,000,000,000​ ​CBT
+**Token Sale** ​​-​ ​40%​ ​Token​ ​Generating​ ​Event
+**Payment Method** ​​-​ ​BTC​ ​or​ ​ETH
+**Maximum Raise** ​​-​ ​$25m
 
-**Token Allocation** ● Token​ ​Sale​ ​-​ ​40% ● Partners​ ​-​ ​20% ● Reserved​ ​-​ ​20% ● Team​ ​&​ ​Advisors​ ​-​ ​20%
+**Token Allocation** :
+* Token​ ​Sale​ ​-​ ​40%
+* Partners​ ​-​ ​20%
+* Reserved​ ​-​ ​20%
+* Team​ ​&​ ​Advisors​ ​-​ ​20%
 
-The token sale will take place on the CommerceBlock token issuance platform. On the site, users can make payment in Bitcoin or Ethereum. Once the purchaser's payment has confirmed, they will be put in an allocation queue based on the block height that their transaction confirmed in. Each user will be given a unique deposit address to ensure
-
-miners cannot game transaction ordering and temporarily censor transactions. Tokens will be​ ​allocated​ ​and​ ​distributed​ ​asynchronously​ ​after​ ​being​ ​processed​ ​through​ ​the​ ​queue.
+The token sale will take place on the CommerceBlock token issuance platform. On the site, users can make payment in Bitcoin or Ethereum. Once the purchaser's payment has confirmed, they will be put in an allocation queue based on the block height that their transaction confirmed in. Each user will be given a unique deposit address to ensure miners cannot game transaction ordering and temporarily censor transactions. Tokens will be​ ​allocated​ ​and​ ​distributed​ ​asynchronously​ ​after​ ​being​ ​processed​ ​through​ ​the​ ​queue.
 
 A maximum of 40% of tokens will be sold to the public; of that 40%, 20% will be available to pre-sale purchasers, which is 8% of the total Token Sale allocation. If the pre-sale allocation is not fully consumed, the extra tokens will roll into the wider token sale. If there remains unpurchased tokens from this allocation after the sale has ended, the extra tokens will be provably​ ​burned.​ ​Any​ ​overflow​ ​payments​ ​will​ ​be​ ​refunded.
 
 20% of the tokens will be reserved and used as incentives for our Enterprise Integration partners. It is easier to sell our services to potential clients if their usage of CommerceBlock is heavily discounted. The tokens allocated for incentives will not be released until the CommerceBlock platform is prepared to take CBTs as payment. Another 20% will be locked up for 6 months from the closing date of token sales. The final 20% is reserved for advisors and​ ​team​ ​members.
 
-**Revenue Usage** ● Software​ ​development​ ​for​ ​the​ ​CommerceBlock​ ​platform​ ​-​ ​50% ● Operations​ ​-​ ​20% ● Marketing​ ​-​ ​15% ● Open​ ​source​ ​software​ ​development​ ​-​ ​15%
+**Revenue Usage**
+
+* Software​ ​development​ ​for​ ​the​ ​CommerceBlock​ ​platform​ ​-​ ​50%
+* Operations​ ​-​ ​20%
+* Marketing​ ​-​ ​15%
+* Open​ ​source​ ​software​ ​development​ ​-​ ​15%
 
 The large majority of our expenses will fund CommerceBlock engineers tasked with building out the platform. Operational costs will include stipends for consultations with legal and regulatory experts, customer relationship management, human resources and related expenditures. Marketing funds will reserved for large scale advertising campaigns managed​ ​by​ ​experts.
 
@@ -155,7 +163,7 @@ Our philosophy is to build tools and first test them internally and with our Ent
 
 Having been involved in Bitcoin as early as 2012, the founding team has deep experience in the cryptocurrency space. With engineering backgrounds and complementary experience in investment and traditional banking as well as technology startups, the founders are well suited to build out a blockchain based infrastructure company. The skills of the founding team are greatly enhanced by the hand picked business development and engineering teams,​ ​many​ ​of​ ​whom​ ​have​ ​experience​ ​in​ ​the​ ​cryptocurrency​ ​ecosystem.
 
-**Nicholas Gregory, CEO** Background in technology and finance. Senior roles at Merrill Lynch and JPMorgan. Involved​ ​in​ ​bitcoin​ ​since​ ​2012.​ ​Working​ ​in​ ​crypto​ ​space​ ​since​ ​ 2015
+**Nicholas Gregory, CEO** Background in technology and finance. Senior roles at Merrill Lynch and JPMorgan. Involved​ ​in​ ​bitcoin​ ​since​ ​2012.​ ​Working​ ​in​ ​crypto​ ​space​ ​since​ 2015
 **Omar Shibli, CTO** Technology startup veteran having had leadership roles at ZocDoc and Eyeview, open source​ ​contributor​ ​to​ ​crypto​ ​projects​ ​on​ ​github
 **Dan Eve, Head of Operations** Seasoned Business Analyst in a FTSE 50 financial company. Evolved into a cryptocurrency advisor,​ ​trader​ ​and​ ​miner
 **Shachaf ​Rodberg, Design** UX/UI​ ​designer​ ​with​ ​years​ ​of​ ​experience​ ​and​ ​a​ ​passion​ ​for​ ​cryptocurrencies
@@ -170,18 +178,18 @@ While success is never guaranteed, it is clear that the disintermediating capabi
 
 ### References
 
-[1]​​​<https://www.imf.org/external/pubs/ft/wp/2013/wp1328.pdf
-[2]​​​<https://bitcoin.org/bitcoin.pd​f
-[3]​​​<https://github.com/commerceblock/pay-to-contract-ui
-[4]​​​<https://arxiv.org/pdf/1212.3257.pdf
-[5]​​​<https://github.com/lightningnetwork/lightning-rfc
-[6]​​​<http://www.jbonneau.com/doc/GBGN17-FC-physical_escrow.pdf
-[7]​​​<https://adiabat.github.io/dlc.pdf
-[8]​​​<https://blockstream.com/sidechains.pdf
-[9]​​​<https://blockstream.com/bitcoin17-final41.pdf
-[10]​​​<https://petertodd.org/2016/commitments-and-single-use-seals
-[11]<https://github.com/commerceblock/pay-to-contract-protocol-specification/blob/master/bip-draft.mediawiki
-[12]​​<http://www.columbia.edu/~jl4130/BTC.pdf
+[1]​​​<https://www.imf.org/external/pubs/ft/wp/2013/wp1328.pdf>
+[2]​​​<https://bitcoin.org/bitcoin.pd​f>
+[3]​​​<https://github.com/commerceblock/pay-to-contract-ui>
+[4]​​​<https://arxiv.org/pdf/1212.3257.pdf>
+[5]​​​<https://github.com/lightningnetwork/lightning-rfc>
+[6]​​​<http://www.jbonneau.com/doc/GBGN17-FC-physical_escrow.pdf>
+[7]​​​<https://adiabat.github.io/dlc.pdf>
+[8]​​​<https://blockstream.com/sidechains.pdf>
+[9]​​​<https://blockstream.com/bitcoin17-final41.pdf>
+[10]​​​<https://petertodd.org/2016/commitments-and-single-use-seals>
+[11]<https://github.com/commerceblock/pay-to-contract-protocol-specification/blob/master/bip-draft.mediawiki>
+[12]​​<http://www.columbia.edu/~jl4130/BTC.pdf>
 [13]​​<https://cyber.stanford.edu/sites/default/files/russelloconnor.pdf>
 
 **Important Notice**
