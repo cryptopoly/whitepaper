@@ -108,7 +108,7 @@ Developers building infrastructure on the CommerceBlock platform will have acces
   * Merchants and customers receive cryptographic proof that a Bitcoin transaction​ ​is​ ​associated​ ​with​ ​a​ ​real​ ​world​ ​contract​ ​in​ ​zero​ ​knowledge.
 * **Smart contract templates and escrow wizard:**   
   * Escrow and smart contract templates will be available for trade flow management. These templates will make multisignature dispute mediation easier​ ​for​ ​B2B,​ ​B2C​ ​and​ ​P2P​ ​trading​ ​applications.
-  * Templates for in-channel lightning network smart contracts will be available as well. API users in multisignature escrow can engage their funds into swaps, CFDs, and other financial instruments. Extended with atomic swaps, a Bitcoin backed derivatives market could be constructed on top of the Lightning​ ​Network.
+  * Templates for in-channel lightning network smart contracts will be available as well. API users in multisignature escrow can engage their funds into swaps, CFDs, and other financial instruments. Extended with atomic swaps, a Bitcoin backed derivatives market could be constructed on top of the Lightning​ ​Network. 
 * **Token management and distribution**:
   * Asset issuers will be able to construct and distribute assets on public
 blockchains in a privacy preserving manner. The token purchase agreement
